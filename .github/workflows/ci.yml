@@ -27,7 +27,7 @@ jobs: # 工作流
       - name: Use Node.js ${{ matrix.node-version }} # 步骤2
         uses: actions/setup-node@v1 # 作用：安装nodejs
         with:
-          node-version: ${{ matrix.node-version }} # 版本1
+          node-version: ${{ matrix.node-version }} # 版本111
 
       # - name: run deploy.sh # 步骤3：执行脚本 deploy.sh
       #   env: # 设置环境变量，未设置则不运行
