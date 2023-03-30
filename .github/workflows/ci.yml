@@ -3,7 +3,7 @@ name: CI
 #on: [push]
 
 # 在 master 分支发生 push 事件时触发。
-on: 
+on:
   push:
     branches:
       - master
@@ -19,19 +19,19 @@ jobs: # 工作流
       matrix:
         node-version: [16.x]
 
-    steps: 
+    steps:
       - name: Checkout # 步骤1，拉取代码
       # 使用的动作。格式：userName/repoName。作用：检出仓库，获取源码。 官方actions库：https://github.com/actions
-        uses: actions/checkout@v1 
-      
+        uses: actions/checkout@v1
+
       - name: Use Node.js ${{ matrix.node-version }} # 步骤2
         uses: actions/setup-node@v1 # 作用：安装nodejs
         with:
-          node-version: ${{ matrix.node-version }} # 版本
+          node-version: ${{ matrix.node-version }} # 版本1
 
       # - name: run deploy.sh # 步骤3：执行脚本 deploy.sh
       #   env: # 设置环境变量，未设置则不运行
-      #     GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }} # token 
+      #     GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }} # token
       #     SSH_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }} # 私钥
       #   run: npm install && npm run deploy  # 执行 deploy.sh 脚本，位于项目根目录
 
@@ -42,7 +42,7 @@ jobs: # 工作流
         with:  # 从源到目的地
           source-repo: 'git@github.com:Kele-Bingtang/Kele-Bingtang.github.io.git'    #Github 仓库地址
           destination-repo: 'git@gitee.com:kele-bingtang/Kele-Bingtang.git'    #Gitee 仓库地址
-                              
+
       - name: Build Gitee Pages # 步骤5：自动部署到 Gitee Pages
         uses: yanglbme/gitee-pages-action@master
         with:
