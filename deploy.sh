@@ -10,13 +10,12 @@ npm run build
 cd docs/.vuepress/dist
 
 # 如果发布到自定义域名，请使用，不填则使用 GitHub 自带的 <username>.github.io
-#echo 'github.youngkbt.cn' > CNAME
+echo '' > CNAME
 
 # 如果手运行该脚本，则执行 if 里的，如果是 GitHub 自动执行该脚本，则是 else 里的
 if [ -z "$GITHUB_TOKEN" ]; then
   msg='deploy 脚本部署'
-  githubUrl=`git remote get-url --push origin`
-#  githubUrl=git@github.com:Ming-D-W/Ming-D-W.github.io.git
+  githubUrl=git@github.com:Ming-D-W/Ming-D-W.github.io.git
   # giteeUrl=git@gitee.com:kele-bingtang/Kele-Bingtang.git
 else
   msg='来自 Github actions 的自动部署'
