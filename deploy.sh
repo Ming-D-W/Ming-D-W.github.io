@@ -19,7 +19,7 @@ if [ -z "$GITHUB_TOKEN" ]; then
   # giteeUrl=git@gitee.com:kele-bingtang/Kele-Bingtang.git
 else
   msg='来自 Github actions 的自动部署'
-  githubUrl=https://Ming-D-W:${GITHUB_TOKEN}@github.com/Ming-D-W/Ming-D-W.github.io
+  githubUrl=https://Ming-D-W:${GITHUB_TOKEN}@github.com/Ming-D-W/Ming-D-W.github.io.git
   git config --global user.name "Ming-D-W"
   git config --global user.email "wuwanming0405@163.com"
 fi
