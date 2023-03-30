@@ -26,7 +26,7 @@ fi
 git init
 git add -A
 git commit -m "${msg}"
-git push -f $githubUrl master:gh-pages # 推送到 Github gh-pages 分支
+git push -f $githubUrl main:gh-pages # 推送到 Github gh-pages 分支
 
 # git push -f $giteeUrl master:gh-pages # 推送到 Gitee gh-pages 分支
 
