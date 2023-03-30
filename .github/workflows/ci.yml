@@ -41,7 +41,7 @@ jobs: # 工作流
           SSH_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
         with:  # 从源到目的地
           source-repo: 'git@github.com:Ming-D-W/Ming-D-W.github.io.git'    #Github 仓库地址
-          destination-repo: 'git@gitee.com:Ming-D-W/Ming-D-W.gitee.io.git'    #Gitee 仓库地址
+          destination-repo: 'git@gitee.com:Ming-D-W/Ming-D-W.git'    #Gitee 仓库地址
 
       - name: Build Gitee Pages # 步骤5：自动部署到 Gitee Pages
         uses: yanglbme/gitee-pages-action@master
@@ -51,6 +51,6 @@ jobs: # 工作流
           # 注意在 Settings -> Secrets 配置 GITEE_PASSWORD
           gitee-password: ${{ secrets.GITEE_PASSWORD }}
           # 注意替换为你的 Gitee 仓库地址，仓库名严格区分大小写，一般地址和仓库名一致，如果地址改了，仓库名不改，要以地址为准（地址仅需后缀，即 https://gitee.com/<username>/xxx 的 xxx 即可）
-          gitee-repo: Ming-D-W/Ming-D-W.gitee.io
+          gitee-repo: Ming-D-W/Ming-D-W
           # 要部署的分支，默认是 master，若是其他分支，则需要指定（指定的分支必须存在）
           branch: gh-pages
