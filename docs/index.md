@@ -36,22 +36,69 @@ postList: detailed
 <!-- <img src="/img/panda-waving.png" class="panda no-zoom" style="width: 130px;height: 115px;opacity: 0.8;margin-bottom: -4px;padding-bottom:0;position: fixed;bottom: 0;left: 0.5rem;z-index: 1;"> -->
 
 
-本地址是完整版，偏向博客风格。
+## 目录页的front matter
 
-如果你想访问纯净版，请跳转到 <https://pure.notes.youngkbt.cn/>
+```
+---
+pageComponent: # 使用页面组件
+  name: Catalogue # 组件名：Catalogue => 目录页组件 ，使用目录页时 必须 设置为Catalogue
+  data: # 组件所需数据
+    path:  01.学习笔记/01.前端 # 设置为`docs/`下面的某个文件夹相对路径，如‘01.学习笔记/01.前端’ 或 ’01.学习笔记‘ (有序号的要带序号)
+    imgUrl: /img/web.png # 目录页内的图片
+    description: JavaScript、ES6、Vue框架等前端技术 # 目录描述（可加入a标签）
+title:  # 页面标题
+date:  # 创建日期
+permalink: /note/javascript # 永久链接
+sidebar: false # 不显示侧边栏
+article: false # 不是文章页 (不显示面包屑栏、最近更新栏等)
+comment: false # 不显示评论栏
+editLink: false # 不显示编辑按钮
+---
+```
 
-纯净版的目的是为了能更沉浸式的阅读文章，整个页面望去都是文档，没有其他花里胡哨的动态效果，更偏向于文档风格，同时访问速度稍微快一点。
+## 笔记文档的front matter
 
-纯净版没有评论区、背景大图、弹窗消息、动态页面标题、私密文章等模块功能，所以想 **留言** 和我交流，可以直接去右上角的留言区。
+```
+---
+title:     # 页面标题
+date:     # 创建日期
+permalink:  # 永久链接
+categories:  # 所在目录
+  - 
+tags:    # 所属标签
+  - 
+---
+```
 
-> 如果本页面无法访问，这里提供所有的地址方便跳转，主地址的内容一定是最新的，其他的可能落后一两个版本，也可能是最新的，取决于我更新时的网络
+## 完整的front matter
 
-- 完整版主地址（快）：<https://notes.youngkbt.cn/>
-- 完整版 GitHub Pages 地址（中、快）：<https://github.youngkbt.cn/>
-- 完整版 Gitee Pages 地址（快）：<https://kele-bingtang.gitee.io/>
-- 完整版个人服务器地址（慢）：<https://server.notes.youngkbt.cn/>
-- 纯净版主地址（没有花里胡哨的效果，快）：<https://pure.notes.youngkbt.cn/>
-- 纯净版 GitHub Pages 地址（没有花里胡哨的效果，快）：<https://github.youngkbt.cn/pure-blog/>
+```
+---
+title: 标题
+date: 2020-02-21 14:40:19
+permalink: /pages/a1bc87
+categories:
+  - 分类1
+  - 分类2
+tags:
+  - 标签1
+sidebar: false
+article: false
+comment: false
+editLink: false
+author:
+ name: 作者
+ link: https://xxx.com
+sticky: 1  # 置顶，1 最高，数字越大，置顶地位越低下
+---
+```
+## 介绍
+
+1. 这个博客的初衷是打造一个好用的、面向程序员的`知识管理工具`
+2. 轻松构建一个`结构化`的知识库，让你的知识海洋像一本本书一样清晰易读。
+3. 博客功能提供一种知识的`碎片化`形态，并支持个性化博客配置。
+4. `简洁高效`，以 Markdown 为中心的项目结构。内置自动化工具，以更少的配置完成更多的事。配合多维索引快速定位每个知识点。
+
 
 <ClientOnly>
   <WebInfo />
