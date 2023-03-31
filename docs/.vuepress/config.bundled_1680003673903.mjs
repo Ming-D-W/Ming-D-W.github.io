@@ -43,9 +43,9 @@ var plugins_default = [
       options: {
         clientID: "e88197fb6385926c9d33",
         clientSecret: "dbb93f54391ab68b4aede08d3b9b373d24014e62",
-        repo: "blog-gitalk-comment",
-        owner: "Ming-D-W",
-        admin: ["Ming-D-W"],
+        repo: 'blog-gitalk-comment', // GitHub 仓库
+        owner: 'Ming-D-W', // GitHub仓库所有者
+        admin: ['Ming-D-W'], // 对仓库有写权限的人
         pagerDirection: "last",
         id: "<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>",
         title: "\u300C\u8BC4\u8BBA\u300D<%- frontmatter.title %>",
