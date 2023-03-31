@@ -35,70 +35,62 @@ postList: detailed
 <!-- 网页左下角动态gif 小熊猫挥手 -->
 <!-- <img src="/img/panda-waving.png" class="panda no-zoom" style="width: 130px;height: 115px;opacity: 0.8;margin-bottom: -4px;padding-bottom:0;position: fixed;bottom: 0;left: 0.5rem;z-index: 1;"> -->
 
+- ## 目录页的front matter
 
-## 目录页的front matter
+  ```
+  ---
+  pageComponent: # 使用页面组件
+    name: Catalogue # 组件名：Catalogue => 目录页组件 ，使用目录页时必须设置
+    data: # 组件所需数据
+      path:  01.学习笔记/01.前端 
+      imgUrl: /img/web.png # 目录页内的图片
+      description: JavaScript、ES6、Vue框架等前端技术 # 目录描述（可加入a标签）
+  title:  # 页面标题
+  date:  # 创建日期
+  permalink: /note/javascript # 永久链接
+  sidebar: false # 不显示侧边栏
+  article: false # 不是文章页 (不显示面包屑栏、最近更新栏等)
+  comment: false # 不显示评论栏
+  editLink: false # 不显示编辑按钮
+  ---
+  ```
 
-```
----
-pageComponent: # 使用页面组件
-  name: Catalogue # 组件名：Catalogue => 目录页组件 ，使用目录页时 必须 设置为Catalogue
-  data: # 组件所需数据
-    path:  01.学习笔记/01.前端 # 设置为`docs/`下面的某个文件夹相对路径，如‘01.学习笔记/01.前端’ 或 ’01.学习笔记‘ (有序号的要带序号)
-    imgUrl: /img/web.png # 目录页内的图片
-    description: JavaScript、ES6、Vue框架等前端技术 # 目录描述（可加入a标签）
-title:  # 页面标题
-date:  # 创建日期
-permalink: /note/javascript # 永久链接
-sidebar: false # 不显示侧边栏
-article: false # 不是文章页 (不显示面包屑栏、最近更新栏等)
-comment: false # 不显示评论栏
-editLink: false # 不显示编辑按钮
----
-```
+  ## 笔记文档的front matter
 
-## 笔记文档的front matter
+  ```
+  ---
+  title:     # 页面标题
+  date:     # 创建日期
+  permalink:  # 永久链接
+  categories:  # 所在目录
+    - 
+  tags:    # 所属标签
+    - 
+  ---
+  ```
 
-```
----
-title:     # 页面标题
-date:     # 创建日期
-permalink:  # 永久链接
-categories:  # 所在目录
-  - 
-tags:    # 所属标签
-  - 
----
-```
+  ## 完整的front matter
 
-## 完整的front matter
-
-```
----
-title: 标题
-date: 2020-02-21 14:40:19
-permalink: /pages/a1bc87
-categories:
-  - 分类1
-  - 分类2
-tags:
-  - 标签1
-sidebar: false
-article: false
-comment: false
-editLink: false
-author:
- name: 作者
- link: https://xxx.com
-sticky: 1  # 置顶，1 最高，数字越大，置顶地位越低下
----
-```
-## 介绍
-
-1. 这个博客的初衷是打造一个好用的、面向程序员的`知识管理工具`
-2. 轻松构建一个`结构化`的知识库，让你的知识海洋像一本本书一样清晰易读。
-3. 博客功能提供一种知识的`碎片化`形态，并支持个性化博客配置。
-4. `简洁高效`，以 Markdown 为中心的项目结构。内置自动化工具，以更少的配置完成更多的事。配合多维索引快速定位每个知识点。
-
+  ```
+  ---
+  title: 标题
+  date: 2020-02-21 14:40:19
+  permalink: /pages/a1bc87
+  categories:
+    - 分类1
+    - 分类2
+  tags:
+    - 标签1
+  sidebar: false
+  article: false
+  comment: false
+  editLink: false
+  author:
+   name: 作者
+   link: https://xxx.com
+  sticky: 1  # 置顶，1 最高，数字越大，置顶地位越低下
+  ---
+  ```
 
 <ClientOnly>
   <WebInfo />
