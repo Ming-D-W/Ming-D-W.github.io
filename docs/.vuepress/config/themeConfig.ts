@@ -11,7 +11,7 @@ export default <VdoingThemeConfig> {
   nav, // 导航栏
   sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
   logo: "/img/index/logo.png", // 导航栏logo
-  repo: "Kele-Bingtang/Kele-Bingtang.github.io", // 导航栏右侧生成Github链接
+  repo: "https://github.com/Ming-D-W", // 导航栏右侧生成Github链接
   searchMaxSuggestions: 10, // 搜索结果显示最大数
   lastUpdated: "更新时间", // 开启更新时间，并配置前缀文字   string | boolean (取值为git提交时间)
   docsDir: "docs", // 指定根目录
@@ -132,29 +132,19 @@ export default <VdoingThemeConfig> {
     // iconfontCssFile: '//at.alicdn.com/t/font_1678482_u4nrnp8xp6g.css', // 可选，阿里图标库在线css文件地址，对于主题没有的图标可自由添加
     icons: [
       {
-        iconClass: "icon-github",
-        title: "GitHub",
-        link: "https://github.com/kele-bingtang",
+        iconClass: 'icon-youjian',
+        title: '发邮件',
+        link: 'mailto:wuwanming0405@163.com',
       },
       {
-        iconClass: "icon-gitee",
-        title: "Gitee",
-        link: "https://gitee.com/kele-bingtang",
+        iconClass: 'icon-github',
+        title: 'GitHub',
+        link: 'https://github.com/Ming-D-W',
       },
       {
-        iconClass: "icon-rss",
-        title: "网站首页",
-        link: "https://www.youngkbt.cn",
-      },
-      {
-        iconClass: "icon-QQ",
-        title: "QQ",
-        link: "http://wpa.qq.com/msgrd?v=3&uin=28761025&site=qq&menu=yes",
-      },
-      {
-        iconClass: "icon-youjian",
-        title: "联系我",
-        link: "https://www.youngkbt.cn/?contact=true",
+        iconClass: 'icon-erji',
+        title: '听音乐',
+        link: 'https://music.163.com/#/user/home?id=515874856',
       },
     ],
   },
