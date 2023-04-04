@@ -5,6 +5,7 @@ import indexNav from '../nav/indexNav'
 import moreNav from '../nav/moreNav'
 import JSNav from "../nav/JSNav";
 import webapiNav from "../nav/webapiNav";
+import demoNav from "../nav/demoNav";
 
 export default [
     {
@@ -14,6 +15,7 @@ export default [
     JSNav,   // JS导航
     webapiNav,   // WebAPI导航
     toolNav,  // 工具导航
+    demoNav,  // demo导航
     moreNav,   // 更多导航
     indexNav,   //索引导航
     {

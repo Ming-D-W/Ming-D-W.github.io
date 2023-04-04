@@ -1,4 +1,4 @@
-// 工具导航栏
+// 基础导航栏
 export default {
     text: '前端基础', link: '/basics/',
     items: [
