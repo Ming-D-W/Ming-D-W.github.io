@@ -4,17 +4,11 @@ export default {
     items: [
         {
             text: '基础',
-            items: [
-                { text: 'JS', link: '/JSbasics/' }
-            ]
+            link: '/JSbasics/'
         },
         {
             text: 'ES6',
-            items: [
-                { text: 'Linux', link: '/linux/' },
-                { text: 'Docker', link: '/docker/' },
-                { text: 'Jenkins', link: '/jenkins/' },
-            ]
+            link: '/JSbasics/'
         },
     ]
 }

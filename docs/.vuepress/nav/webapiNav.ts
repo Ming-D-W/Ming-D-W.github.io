@@ -3,19 +3,29 @@ export default {
     text: 'Web Api', link: '/tool/',
     items: [
         {
-            text: '管理',
-            items: [
-                { text: 'Maven', link: '/maven/' },
-                { text: 'Git', link: '/git/' }
-            ]
+            text: 'Dom',
+            link: '/tool/'
         },
         {
-            text: '部署',
-            items: [
-                { text: 'Linux', link: '/linux/' },
-                { text: 'Docker', link: '/docker/' },
-                { text: 'Jenkins', link: '/jenkins/' },
-            ]
+            text: 'Bom',
+            link: '/tool/'
         },
+        {
+            text: 'axios',
+            link: '/tool/'
+        },
+        {
+            text: '跨域',
+            link: '/tool/'
+        },
+        {
+            text: '事件',
+            link: '/tool/'
+        },
+        {
+            text: '存储',
+            link: '/tool/'
+        },
+
     ]
 }
