@@ -1,13 +1,13 @@
 // demo导航栏
 export default {
-    text: 'demo', link: '/basics/',
+    text: 'Demo', link: '/basics/',
     items: [
         {
             text: '神领物流',
             link: 'http://124.222.141.165:90/'
         },
         {
-            text: '尺锤管理',
+            text: '尺锤人员管理',
             link: 'http://124.222.141.165:99/'
         }
     ]
