@@ -7,7 +7,7 @@ interface Footer {
 
 export default <Footer> {
   // 页脚信息
-  createYear: 2021, 
+  createYear: 2021,
   copyrightInfo:
-    penName + ' | ' + footerTitle + '<br> <a href="http://beian.miit.gov.cn/" target="_blank">桂ICP备2021009994号</a>', 
+    penName + ' | ' + footerTitle + '<br> <a href="http://beian.miit.gov.cn/" target="_blank">陇ICP备2023000815号</a>',
 }
