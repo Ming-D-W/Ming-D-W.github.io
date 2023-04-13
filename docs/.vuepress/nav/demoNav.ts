@@ -1,6 +1,6 @@
 // demo导航栏
 export default {
-    text: 'Demo', link: '/basics/',
+    text: 'Demo',
     items: [
         {
             text: '神领物流',
