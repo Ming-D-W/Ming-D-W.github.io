@@ -21,7 +21,7 @@ export default {
       this.init();
     }
   },
-  methods: { 
+  methods: {
     init() {
       var cvs = document.getElementById("cvs");
       if (!cvs) {
@@ -267,7 +267,7 @@ export default {
       var iv = setInterval(() => {
         if (screen.complete && screenMask.complete) {
           // 可以切换图片的位置，也可以换成自己的图片
-          screenImageCtx.drawImage(screen, -300, -50, 1280, 720);
+          screenImageCtx.drawImage(screen, -50, -20, 320, 426);
           screenImageCtx.globalCompositeOperation = "destination-atop";
           screenImageCtx.drawImage(screenMask, 0, 0);
           screenImageCtx.globalCompositeOperation = "source-over";
