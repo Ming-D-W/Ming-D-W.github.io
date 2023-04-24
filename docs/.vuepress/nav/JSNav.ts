@@ -8,7 +8,7 @@ export default {
         },
         {
             text: 'ES6',
-            link: '/JSbasics/'
+            link: '/JS-ES6/'
         },
     ]
 }
