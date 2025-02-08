@@ -12,6 +12,11 @@
 
 6️⃣ 纯净版 GitHub Pages 地址（没有花里胡哨的效果，快）：<https://github.youngkbt.cn/pure-blog/>
 
+## CI/CD
+
+``` yml
+ sh deploy.sh  # 部署到GitHub Pages
+```
 ## 目录页的front matter
 
 ``` yml
