@@ -13,7 +13,7 @@
 6️⃣ 纯净版 GitHub Pages 地址（没有花里胡哨的效果，快）：<https://github.youngkbt.cn/pure-blog/>
 
 
-## 目录页的front matter1
+## 目录页的front matter
 
 ``` yml
 ---
