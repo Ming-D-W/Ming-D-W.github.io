@@ -7,6 +7,10 @@ import { penName, title } from "./common/info";
 
 export default defineConfig4CustomTheme({
   theme: "vdoing", // 使用npm包主题
+
+  // 启用缓存以加速构建
+  cache: true,
+
   // 如果使用 locales 的 title 和 description，则下方的 title 和 description 失效
   // title: penName + title,
   // description: 'Young Kbt个人博客, VuePress搭建, 使用了 Vdoing 主题, 学习Java, Web, 框架, 微服务, 工具, 前端等相关知识, 记录生活和技术路程, 同时分享编程技巧。',

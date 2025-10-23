@@ -14,6 +14,9 @@ docs/.vuepress/config.bundled_*.mjs
 docs/.vuepress/.temp
 docs/.vuepress/.cache
 
+# VuePress 缓存
+node_modules/.cache/
+
 # 百度链接推送
 urls.txt
 

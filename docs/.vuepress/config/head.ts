@@ -1,5 +1,4 @@
 import { HeadTags } from 'vuepress/config';
-import baidutj from '../common/baidutj.js';
 
 // head
 export default <HeadTags>[
@@ -25,9 +24,6 @@ export default <HeadTags>[
   // ['script', { src: 'https://unpkg.zhimg.com/react-dom/umd/react-dom.production.min.js' }],
   // ['script', { src: 'https://unpkg.zhimg.com/vue/dist/vue.min.js' }],
   // ['script', { src: 'https://unpkg.zhimg.com/@babel/standalone/babel.min.js' }],
-
-  // 百度统计 js
-  ['script', {}, baidutj],
 
   /*  [
      'script',

@@ -30,6 +30,19 @@ jobs: # 工作流
           node-version: ${{ matrix.node-version }} # 版本
           cache: 'npm' # 添加 npm 缓存
 
+      # 缓存 VuePress 构建产物
+      - name: Cache VuePress
+        uses: actions/cache@v3
+        with:
+          path: |
+            node_modules/.cache
+            docs/.vuepress/.cache
+            docs/.vuepress/.temp
+          key: ${{ runner.os }}-vuepress-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('docs/**/*.md') }}
+          restore-keys: |
+            ${{ runner.os }}-vuepress-${{ hashFiles('**/package-lock.json') }}-
+            ${{ runner.os }}-vuepress-
+
       # - name: run deploy.sh # 步骤3：执行脚本 deploy.sh
       #   env: # 设置环境变量，未设置则不运行
       #     GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }} # token
