@@ -38,4 +38,33 @@ export default defineConfig4CustomTheme({
   head,
 
   plugins,
+
+  // Webpack 构建优化
+  chainWebpack: (config, isServer) => {
+    // 仅在客户端构建时应用代码分割优化（服务端渲染不支持）
+    if (!isServer) {
+      config.optimization.splitChunks({
+        chunks: 'all',
+        cacheGroups: {
+          vendors: {
+            test: /[\\/]node_modules[\\/]/,
+            priority: 10,
+            name: 'vendors',
+            reuseExistingChunk: true
+          },
+          common: {
+            minChunks: 2,
+            priority: 5,
+            name: 'common',
+            reuseExistingChunk: true
+          }
+        }
+      });
+
+      // 生产环境压缩优化
+      if (process.env.NODE_ENV === 'production') {
+        config.optimization.minimize(true);
+      }
+    }
+  },
 });
