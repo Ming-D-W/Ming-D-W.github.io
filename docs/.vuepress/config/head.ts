@@ -25,8 +25,6 @@ export default <HeadTags>[
   // ['script', { src: 'https://unpkg.zhimg.com/react-dom/umd/react-dom.production.min.js' }],
   // ['script', { src: 'https://unpkg.zhimg.com/vue/dist/vue.min.js' }],
   // ['script', { src: 'https://unpkg.zhimg.com/@babel/standalone/babel.min.js' }],
-  // Twikoo 评论系统
-  ['script', { src: 'https://cdn.staticfile.org/twikoo/1.6.7/twikoo.all.min.js' }],
 
   // 百度统计 js
   ['script', {}, baidutj],

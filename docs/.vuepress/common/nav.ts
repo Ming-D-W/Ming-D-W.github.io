@@ -18,10 +18,4 @@ export default [
     demoNav,  // demo导航
     moreNav,   // 更多导航
     indexNav,   //索引导航
-    {
-        text: '导航站', link: '/navigation/'
-    },
-    {
-        text: '留言区', link: '/message-area/'
-    },
 ]
