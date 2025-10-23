@@ -10,6 +10,9 @@ yarn.lock
 
 # vuepress
 docs/.vuepress/dist
+docs/.vuepress/config.bundled_*.mjs
+docs/.vuepress/.temp
+docs/.vuepress/.cache
 
 # 百度链接推送
 urls.txt
