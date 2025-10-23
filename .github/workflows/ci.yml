@@ -17,17 +17,18 @@ jobs: # 工作流
 
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [20.x]
 
     steps:
       - name: Checkout # 步骤1，拉取代码
         # 使用的动作。格式：userName/repoName。作用：检出仓库，获取源码。 官方actions库：https://github.com/actions
-        uses: actions/checkout@v1
+        uses: actions/checkout@v4
 
       - name: Use Node.js ${{ matrix.node-version }} # 步骤2
-        uses: actions/setup-node@v1 # 作用：安装nodejs
+        uses: actions/setup-node@v4 # 作用：安装nodejs
         with:
           node-version: ${{ matrix.node-version }} # 版本
+          cache: 'npm' # 添加 npm 缓存
 
       # - name: run deploy.sh # 步骤3：执行脚本 deploy.sh
       #   env: # 设置环境变量，未设置则不运行
