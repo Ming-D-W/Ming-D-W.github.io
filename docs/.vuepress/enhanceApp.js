@@ -1,6 +1,24 @@
 // import LastReadingPopup from './components/LastReadingPopup.vue'
 // let busuanzi;
 
+/**
+ * 抑制 Vue Router 的中文路径编码警告
+ * 必须在文件最开始执行，在 Vue Router 初始化之前
+ */
+if (typeof window !== 'undefined') {
+  const originalWarn = console.warn;
+  console.warn = function(...args) {
+    // 过滤掉 Vue Router 的中文路径编码警告
+    if (args[0] && typeof args[0] === 'string' &&
+        args[0].includes('[vue-router]') &&
+        args[0].includes('contains unencoded characters')) {
+      return;
+    }
+    // 其他警告正常输出
+    originalWarn.apply(console, args);
+  };
+}
+
 export default ({
   Vue, // VuePress 正在使用的 Vue 构造函数
   options, // 附加到根实例的一些选项
@@ -20,6 +38,9 @@ export default ({
   //   }
   //   next();
   // })
+
+
+
   /**
    * 私密文章验证
    */
